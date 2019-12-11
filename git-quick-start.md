@@ -16,13 +16,8 @@ git reflog #查看命令历史
 ```
 
 ## 版本库
+- 工作区、暂存区、本地仓库、远程仓库
 
-- 工作区
-- 暂存区
-- 本地仓库
-- 远程仓库
-
-工作区>>>>暂存区>>>>仓库
 git add把文件从工作区>>>>暂存区，git commit把文件从暂存区>>>>仓库
 git diff查看工作区和暂存区差异
 git diff --cached查看暂存区和仓库（上次git commit 后的内容）差异
@@ -39,8 +34,7 @@ git diff HEAD 查看工作区和仓库的差异
 git checkout -- test.txt
 git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”
 
-<<<<<<< HEAD
-## branch branch branch branch branch
+## branch
 git branch -b dev
 查看分支：git branch
 创建分支：git branch <name>
@@ -48,4 +42,3 @@ git branch -b dev
 创建+切换分支：git checkout -b <name>或者git switch -c <name>
 合并某分支到当前分支：git merge <name>
 删除分支：git branch -d <name>
-
