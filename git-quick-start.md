@@ -39,7 +39,8 @@ git diff HEAD 查看工作区和仓库的差异
 git checkout -- test.txt
 git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”
 
-## branch
+<<<<<<< HEAD
+## branch branch branch branch branch
 git branch -b dev
 查看分支：git branch
 创建分支：git branch <name>
@@ -47,3 +48,4 @@ git branch -b dev
 创建+切换分支：git checkout -b <name>或者git switch -c <name>
 合并某分支到当前分支：git merge <name>
 删除分支：git branch -d <name>
+
