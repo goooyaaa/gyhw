@@ -38,3 +38,6 @@ git diff HEAD 查看工作区和仓库的差异
 另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：
 git checkout -- test.txt
 git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”
+
+## branch
+git branch -b dev
