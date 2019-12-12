@@ -42,3 +42,48 @@ git branch -b dev
 创建+切换分支：git checkout -b <name>或者git switch -c <name>
 合并某分支到当前分支：git merge <name>
 删除分支：git branch -d <name>
+
+## TAG 
+显示tag
+git tag
+加上 -l 命令使用通配符来过滤tag
+git tag -l "v1.3*"
+v1.3
+v1.3-bugfix
+
+通过加上 -a 参数来创建一个带备注的tag, 备注信息由 -m 指定：
+git tag -a v1.6 -m "publish v1.6 version"
+为历史版本添加tag
+git tag v1.1.1 03f98856b1a422b5604fc1337500b756513e785c
+git tag -a v1.2 9fceb02 -m "my tag"
+
+git push origin v1.6
+推送本地所有tag
+git push origin --tags
+
+删除tag
+git tag -d v1.6
+
+## 分支
+git branch
+git branch -r
+git branch -v
+git branch -a
+
+禁用Fast forward合并：
+git merge --no-ff -m "merge with no-ff" [branch_name]
+
+如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除。
+
+git log --graph --pretty=oneline --abbrev-commit
+## stash
+git stash暂存一下，clear工作区。事情做完，再git stash list 、git stash pop
+默认情况下， git stash 会缓存下列文件：
+- 添加到暂存区的修改（staged changes）
+- Git跟踪的但并未添加到暂存区的修改（unstaged changes）
+
+但不会缓存以下文件：
+- 在工作目录中新的文件（untracked files）
+- 被忽略的文件（ignored files）
+
+git stash 命令提供了参数用于缓存上面两种类型的文件。使用 -u 或者 --include-untracked 可以stash untracked文件。使用 -a 或者 --all 命令可以stash当前目录下的所有修改。
