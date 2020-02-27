@@ -87,3 +87,7 @@ git stash暂存一下，clear工作区。事情做完，再git stash list 、git
 - 被忽略的文件（ignored files）
 
 git stash 命令提供了参数用于缓存上面两种类型的文件。使用 -u 或者 --include-untracked 可以stash untracked文件。使用 -a 或者 --all 命令可以stash当前目录下的所有修改。
+
+
+
+Thread.toString(): thread's name, priority, and thread group.
